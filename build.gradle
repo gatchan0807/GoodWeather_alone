@@ -17,7 +17,7 @@ war {
             it.isDirectory() ? it : project.zipTree(it)
         }
     }
-    from fileTree(dir: 'build/classes/main', include: '**/Main.class')
+    from fileTree(dir: 'build/classes/main', include: '**/jettyServer.class')
 
-    manifest.attributes('Main-Class': 'jp.ahaha.sample.Main') // Mainに設定したパッケージ名（必須）
+    manifest.attributes('Main-Class': 'jp.ahaha.goodWeather.jettyServer') // Mainに設定したパッケージ名（必須）
 }

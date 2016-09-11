@@ -1,4 +1,4 @@
-package jp.ahaha.sample;
+package jp.ahaha.goodWeather;
 
 import java.net.URL;
 import java.security.ProtectionDomain;
@@ -15,18 +15,18 @@ import org.eclipse.jetty.webapp.WebAppContext;
 import org.eclipse.jetty.webapp.WebInfConfiguration;
 import org.eclipse.jetty.webapp.WebXmlConfiguration;
 
-public class Main {
+public class jettyServer {
     public static void main(String[] args) throws Exception {
 
         WebAppContext war = new WebAppContext();
         // ↓ URL を http://hoge.co.jp/sampleapp/sample のような形にしたい場合に使用
-        // war.setContextPath("/sampleapp");
+        // war.setContextPath("/goodWeather");
 
         // ↓ src/main/webapp をコンテンツルートファイルに設定したい場合に使用
         // war.setResourceBase("src/main/webapp");
 
         // war ファイルの場所の取得
-        ProtectionDomain domain = Main.class.getProtectionDomain();
+        ProtectionDomain domain = jettyServer.class.getProtectionDomain();
         URL warLocation = domain.getCodeSource().getLocation();
         war.setWar(warLocation.toExternalForm());
 

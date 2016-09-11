@@ -19,6 +19,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jp.ahaha._main" target="1.8" />
+      <module name="jp.ahaha._test" target="1.8" />
+      <module name="jp.ahaha.goodWeahter_main" target="1.8" />
+      <module name="jp.ahaha.goodWeahter_test" target="1.8" />
       <module name="jp.ahaha.sample_main" target="1.8" />
       <module name="jp.ahaha.sample_test" target="1.8" />
       <module name="jp.ahaha.test_main" target="1.8" />

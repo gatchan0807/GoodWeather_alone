@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jp.ahaha.sample.iml" filepath="$PROJECT_DIR$/.idea/modules/jp.ahaha.sample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jp.ahaha.sample_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jp.ahaha.sample_main.iml" group="jp.ahaha.sample" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jp.ahaha.sample_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jp.ahaha.sample_test.iml" group="jp.ahaha.sample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jp.ahaha.goodWeahter.iml" filepath="$PROJECT_DIR$/.idea/modules/jp.ahaha.goodWeahter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jp.ahaha.goodWeahter_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jp.ahaha.goodWeahter_main.iml" group="jp.ahaha.goodWeahter" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jp.ahaha.goodWeahter_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jp.ahaha.goodWeahter_test.iml" group="jp.ahaha.goodWeahter" />
     </modules>
   </component>
 </project>
