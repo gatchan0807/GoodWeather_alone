@@ -12,8 +12,8 @@
     <orderEntry type="module" module-name="jp.ahaha.goodWeahter_main" />
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:org.eclipse.persistence.jpa:2.6.3" level="project" />
     <orderEntry type="library" name="Gradle: org.projectlombok:lombok:1.14.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.22.1" level="project" />
     <orderEntry type="library" name="Gradle: mysql:mysql-connector-java:5.1.38" level="project" />
+    <orderEntry type="library" name="Gradle: org.glassfish.jersey.containers:jersey-container-servlet:2.22.1" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-webapp:9.3.7.RC1" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.jetty:jetty-annotations:9.3.7.RC1" level="project" />
     <orderEntry type="library" name="Gradle: org.eclipse.persistence:javax.persistence:2.1.1" level="project" />
