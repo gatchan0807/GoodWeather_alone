@@ -1,0 +1,9 @@
+
+build/classes/main/jp/ahaha/goodWeather/DatabaseAccess/
+build/dependency-cache/
+build/tmp/expandedArchives/
+src/test/
+.idea
+out
+.gradle
+
