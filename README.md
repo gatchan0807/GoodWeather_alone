@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# GoodWeather
-=======
 # Java Web Server テンプレート
 
 ## 使用ツール
@@ -52,4 +49,3 @@ gradle 1.4 をインストール
 |Name|任意の名前|
 |Script|ルートディレクトリから start.sh までのパス|
 |Program_aguments|start.shに与えるオプション・引数（書き出し後ファイル名を変更している場合は必須）|
->>>>>>> e20df936e45640ce529c47fea325e237855f2716
