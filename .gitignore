@@ -3,6 +3,8 @@ build/classes/main/jp/ahaha/goodWeather/DatabaseAccess/
 build/dependency-cache/
 build/tmp/expandedArchives/
 build/libs/jettyServer.war
+build/classes/
+build/libs/
 src/test/
 .idea
 out
