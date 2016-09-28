@@ -6,5 +6,6 @@ build/libs/jettyServer.war
 src/test/
 .idea
 out
-.gradle
+
+
 
