@@ -3,7 +3,7 @@
 if [ -n "$2" ]
 then
     FILE_NAME="$2"
-elif [ "$1" == "-c" ]
+elif [ "$1" = "-c" ]
 then
     echo '設定したファイル名を入力してください'
     read FILE_NAME
