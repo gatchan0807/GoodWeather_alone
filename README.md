@@ -2,6 +2,11 @@
 
 ## 使用ツール
 - Gradle
+- Shell Script
+- PowerShell
+- IntelliJ IDEA（おすすめ IDE）
+
+## 使用ライブラリ
 - Jetty Server 9.3.13.M0
 - Jetty websocket 9.3.13.M0
 - lombok (コーディング支援ライブラリ) 1.14.4
@@ -10,10 +15,6 @@
 - jersey (JAX-RS REST-APIライブラリ) 2.22.1
 - gson (JSON変換ライブラリ)
 - Java Servlet
-
-- Shell Script
-- PowerShell
-- IntelliJ IDEA（おすすめ IDE）
 
 ## 概要
 
