@@ -4,3 +4,4 @@ build
 classes/
 src/main/resources/
 src/test/
+out/
