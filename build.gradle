@@ -5,8 +5,14 @@ repositories {
 }
 
 dependencies {
-    providedCompile 'org.eclipse.jetty:jetty-webapp:9.3.7.RC1'
-    providedCompile 'org.eclipse.jetty:jetty-annotations:9.3.7.RC1'
+    providedCompile 'org.eclipse.jetty:jetty-webapp:9.3.13.M0'
+    providedCompile 'org.eclipse.jetty:jetty-annotations:9.3.13.M0'
+    providedCompile 'org.eclipse.jetty.websocket:websocket-server:9.3.13.M0'
+    providedCompile 'org.projectlombok:lombok:1.14.4'
+    providedCompile 'org.eclipse.persistence:eclipselink:2.6.4'
+    providedCompile 'mysql:mysql-connector-java:5.1.38'
+    providedCompile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.1'
+    providedCompile 'com.google.code.gson:gson:2.7'
 }
 
 war {
@@ -19,5 +25,5 @@ war {
     }
     from fileTree(dir: 'build/classes/main', include: '**/Main.class')
 
-    manifest.attributes('Main-Class': 'jp.ahaha.sample.Main') // Mainに設定したパッケージ名（必須）
+    manifest.attributes('Main-Class': 'jp.sysDev.Main') // Mainに設定したパッケージ名（必須）
 }
