@@ -1,21 +1,14 @@
 package jp.ahaha.sample;
 
-import java.net.URL;
-import java.security.ProtectionDomain;
-
 import org.eclipse.jetty.annotations.AnnotationConfiguration;
 import org.eclipse.jetty.plus.webapp.EnvConfiguration;
 import org.eclipse.jetty.plus.webapp.PlusConfiguration;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.webapp.Configuration;
-import org.eclipse.jetty.webapp.FragmentConfiguration;
-import org.eclipse.jetty.webapp.JettyWebXmlConfiguration;
-import org.eclipse.jetty.webapp.MetaInfConfiguration;
-import org.eclipse.jetty.webapp.WebAppContext;
-import org.eclipse.jetty.webapp.WebInfConfiguration;
-import org.eclipse.jetty.webapp.WebXmlConfiguration;
+import org.eclipse.jetty.webapp.*;
 
-public class Main {
+import java.net.URL;
+import java.security.ProtectionDomain;
+
+public class Server {
     public static void main(String[] args) throws Exception {
 
         WebAppContext war = new WebAppContext();
@@ -26,7 +19,7 @@ public class Main {
         // war.setResourceBase("src/main/webapp");
 
         // war ファイルの場所の取得
-        ProtectionDomain domain = Main.class.getProtectionDomain();
+        ProtectionDomain domain = Server.class.getProtectionDomain();
         URL warLocation = domain.getCodeSource().getLocation();
         war.setWar(warLocation.toExternalForm());
 
@@ -42,7 +35,7 @@ public class Main {
         };
         war.setConfigurations(configurations);
 
-        Server server = new Server(8080); // 稼働ポートの設定
+        org.eclipse.jetty.server.Server server = new org.eclipse.jetty.server.Server(8080); // 稼働ポートの設定
         server.setHandler(war);
         server.start();
         server.join();

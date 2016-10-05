@@ -1,4 +1,4 @@
-package jp.ahaha.sample;
+package jp.ahaha.sample.controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/sample") // アクセスするURL
-public class Sample extends HttpServlet {
+public class SampleController extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
         throws IOException {
