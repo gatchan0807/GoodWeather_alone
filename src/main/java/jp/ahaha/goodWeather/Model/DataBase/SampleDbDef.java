@@ -1,4 +1,4 @@
-package jp.ahaha.goodWeather.DataBase;
+package jp.ahaha.goodWeather.Model.DataBase;
 
 import lombok.Getter;
 import lombok.Setter;

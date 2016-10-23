@@ -1,4 +1,4 @@
-package jp.ahaha.sample.controller;
+package jp.ahaha.goodWeather.controller;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

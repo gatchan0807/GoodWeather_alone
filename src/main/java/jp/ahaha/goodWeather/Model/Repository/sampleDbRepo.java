@@ -1,6 +1,6 @@
-package jp.ahaha.goodWeather.Repository;
+package jp.ahaha.goodWeather.Model.Repository;
 
-import jp.ahaha.goodWeather.DataBase.SampleDbDef;
+import jp.ahaha.goodWeather.Model.DataBase.SampleDbDef;
 
 import javax.persistence.*;
 import javax.servlet.annotation.WebServlet;
