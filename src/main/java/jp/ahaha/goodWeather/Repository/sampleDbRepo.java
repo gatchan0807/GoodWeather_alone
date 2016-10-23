@@ -1,4 +1,6 @@
-package jp.ahaha.goodWeather.model;
+package jp.ahaha.goodWeather.Repository;
+
+import jp.ahaha.goodWeather.DataBase.SampleDbDef;
 
 import javax.persistence.*;
 import javax.servlet.annotation.WebServlet;
@@ -8,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/sampledb")
-public class sampleDb extends HttpServlet {
+public class sampleDbRepo extends HttpServlet {
     private EntityManager entityManager;
     private EntityManagerFactory entityManagerFactory;
     long idVal = 0L;
@@ -17,8 +19,8 @@ public class sampleDb extends HttpServlet {
         throws IOException {
         entityManagerFactory = Persistence.createEntityManagerFactory("goodweather");
         entityManager = entityManagerFactory.createEntityManager();
-        Sample sample = new Sample();
-        sample.id = idVal++;
+        SampleDbDef sample = new SampleDbDef();
+        sample.setId(idVal++);
         sample.name = "data";
         entityManager.getTransaction().begin();
         entityManager.persist(sample);

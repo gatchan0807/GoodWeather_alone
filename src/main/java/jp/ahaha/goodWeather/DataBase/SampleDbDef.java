@@ -1,4 +1,4 @@
-package jp.ahaha.goodWeather.model;
+package jp.ahaha.goodWeather.DataBase;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,9 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Sample {
+public class SampleDbDef {
     @Id
-    protected long id;
+    @Getter
+    @Setter
+    protected Long id;
     @Getter
     @Setter
     public String name;
