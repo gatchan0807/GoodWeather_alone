@@ -1,29 +1,44 @@
+apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+gretty {
+    servletContainer = 'jetty9'
+    contextPath = ""
+    httpPort = 8080 // 使用ポート番号
+    fastReload = true   // ホットデプロイ
+    scanInterval = 4
+}
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    providedCompile 'org.eclipse.jetty:jetty-webapp:9.3.13.M0'
-    providedCompile 'org.eclipse.jetty:jetty-annotations:9.3.13.M0'
-    providedCompile 'org.eclipse.jetty.websocket:websocket-server:9.3.13.M0'
-    providedCompile 'org.projectlombok:lombok:1.14.4'
+    // JAX-RS
+    providedCompile group:'javax.ws.rs', name:'javax.ws.rs-api', version:'2.0.1'
+    // Jersey Server
+    compile group: 'org.glassfish.jersey.core', name:'jersey-server', version:'2.22.2'
+    // For use JAX-RS and Servlet
+    compile group:'org.glassfish.jersey.containers', name:'jersey-container-servlet', version:'2.22.2'
+    // Jetty Server (Main Server)
+    compile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: '9.3.13.M0'
+    compile group: 'org.eclipse.jetty', name: 'jetty-annotations', version: '9.3.13.M0'
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version: '3.1.0'
+
+    // Other Libraries
+    providedCompile 'com.google.code.gson:gson:2.7'
     providedCompile 'org.eclipse.persistence:eclipselink:2.6.4'
     providedCompile 'mysql:mysql-connector-java:5.1.38'
-    providedCompile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.1'
-    providedCompile 'com.google.code.gson:gson:2.7'
+    providedCompile 'org.projectlombok:lombok:1.14.4'
+    providedCompile 'org.eclipse.jetty.websocket:websocket-server:9.3.13.M0'
 }
 
-war {
-    baseName = 'jettyServer' // 出力後サーバファイル名
-
-    from {
-        configurations.providedCompile.collect {
-            it.isDirectory() ? it : project.zipTree(it)
-        }
+// script for gretty
+buildscript {
+    repositories { jcenter() }
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:+'
     }
-    from fileTree(dir: 'build/classes/main', include: '**/jettyServer.class')
-
-    manifest.attributes('Main-Class': 'jp.ahaha.goodWeather.jettyServer') // Mainに設定したパッケージ名（必須）
 }
